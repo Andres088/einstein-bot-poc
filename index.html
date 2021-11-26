@@ -42,26 +42,22 @@
             embedded_svc.settings.enabledFeatures = ['LiveAgent'];
             embedded_svc.settings.entryFeature = 'LiveAgent';
 
-            embedded_svc.settings.prepopulatedPrechatFields = {
-                FirstName: "John",
-                LastName: "Doe",
-                Email: "john.doe@salesforce.com",
-                Subject: "Hello"
-            };
-
             embedded_svc.settings.extraPrechatFormDetails = [{
-                "label":"First Name",  
-                "transcriptFields": ["FirstName__c"]
+                "label":"First Name", 
+                "value": "Pablo", 
+                "transcriptFields": ["FirstName__c"],
+                "displayToAgent": true
               },{
                 "label":"Last Name", 
+                "value": "Escobar", 
                 "transcriptFields": ["LastName__c"]
               },{
                 "label":"Email", 
-                "transcriptFields": ["Email__c"]
+                "value": "pablo.escobar@cartelmedellin.com", 
+                "transcriptFields": ["Email__c"],
+                "displayToAgent": true
               }];
-
               
-    
             embedded_svc.init(
                 'https://playful-shark-nirgnn-dev-ed.my.salesforce.com',
                 'https://sf-bots-developer-edition.na162.force.com',
